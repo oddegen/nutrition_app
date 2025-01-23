@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:nutrition_app/auth/login_page.dart';
 import 'package:nutrition_app/core/theme.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:nutrition_app/product_scanner.dart';
 
 class HomePage extends StatefulWidget {
@@ -141,8 +142,8 @@ class _HomePageState extends State<HomePage> {
                         meal['name'],
                         meal['calories'],
                         meal['protein'],
-                        meal['fats'],
-                        meal['carbs'],
+                        meal['fat'],
+                        meal['carbohydrate'],
                         meal['image'],
                       );
                     },
@@ -212,10 +213,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildMealCard(String id, String title, int calories, int protein,
-      int fats, int carbs, String imageId) {
-    var projectId = '6791cd0d00139cfb4f8b';
-    var bucketId = '6791ce13001fc151d44b';
+  Widget _buildMealCard(String id, String title, String calories,
+      String protein, String fats, String carbs, String imageId) {
+    var projectId = dotenv.env['PROJECT_ID'];
+    var bucketId = dotenv.env['STORAGE_BUCKET'];
 
     final client = Client()
         .setEndpoint('https://cloud.appwrite.io/v1')
@@ -236,7 +237,7 @@ class _HomePageState extends State<HomePage> {
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             FutureBuilder(
                 future: storage.getFileDownload(
-                    bucketId: bucketId, fileId: imageId),
+                    bucketId: bucketId!, fileId: imageId),
                 builder: (context, snapshot) {
                   return snapshot.hasData && snapshot.data != null
                       ? Image.memory(snapshot.data!,

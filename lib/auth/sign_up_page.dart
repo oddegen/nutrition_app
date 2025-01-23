@@ -90,7 +90,7 @@ class _SignUpPage extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('TITLE',
+            Text('Gebeta',
                 style: Theme.of(context)
                     .textTheme
                     .titleMedium

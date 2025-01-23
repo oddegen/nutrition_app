@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:appwrite/appwrite.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/intl.dart';
 
 class ProductScannerPage extends StatefulWidget {
@@ -78,8 +79,8 @@ class _ProductScannerPageState extends State<ProductScannerPage> {
             child: Center(
               child: ElevatedButton(
                 onPressed: () async {
-                  var projectId = '6791cd0d00139cfb4f8b';
-                  var bucketId = '6791ce13001fc151d44b';
+                  var projectId = dotenv.env['PROJECT_ID'];
+                  var bucketId = dotenv.env['STORAGE_BUCKET'];
 
                   final client = Client()
                       .setEndpoint('https://cloud.appwrite.io/v1')
@@ -90,7 +91,7 @@ class _ProductScannerPageState extends State<ProductScannerPage> {
                   final fileId = ID.unique();
                   _cameraController.takePicture().then((XFile file) async {
                     await storage.createFile(
-                      bucketId: bucketId,
+                      bucketId: bucketId!,
                       fileId: fileId,
                       file: InputFile.fromPath(path: file.path),
                     );

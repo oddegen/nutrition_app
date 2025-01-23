@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('TITLE',
+            Text('Gebeta',
                 style: Theme.of(context)
                     .textTheme
                     .titleMedium
