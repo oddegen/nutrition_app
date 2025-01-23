@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "250170568751",
+    "project_id": "nutrition-app-49530",
+    "storage_bucket": "nutrition-app-49530.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250170568751:android:83ddab70b3e188cb1056da",
+        "android_client_info": {
+          "package_name": "com.example.nutrition_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250170568751-4j3dkbkkvi1pk7vgagdohemgna7vtqc3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nutrition_app",
+            "certificate_hash": "46f97907bda43fe62e64f0eb2d40e833ce4cb880"
+          }
+        },
+        {
+          "client_id": "250170568751-h812uj50t3grbo55tqee6dt666jjgps9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXYBtWMVX4Nl3kqg1SRpZP6c14XAQOGhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250170568751-h812uj50t3grbo55tqee6dt666jjgps9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "250170568751-viemr1c1b44tf4h5mt3dt242024m2ful.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nutritionApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
