@@ -68,5 +68,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Flutter](https://flutter.dev/)
 - [Firebase](https://firebase.google.com/)
-- [Gemini API](https://gemini.com/)
+- [Gemini API](https://gemini.google.com/)
 - [Appwrite](https://appwrite.io/)
